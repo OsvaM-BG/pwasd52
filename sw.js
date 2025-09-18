@@ -1,8 +1,18 @@
-self.addEventListener(
-    'fetch',
-    function(event){
-        if(/\.jpg$/.test(event.request.url)){
-            event.respondWith( fetch('perro.jpg'));
-        }
+// sw.js
+self.addEventListener('fetch',
+  function(evento) {
+    // http://localhost/pwasd25/pwa2/index.jpg > unicorn.jpg
+    // http://localhost/pwasd25/pwa2/index.jpeg > utp.png
+    console.log(evento.request.url);
+    if(/\.jpg$/.test(evento.request.url)) {
+      evento.respondWith(
+        fetch('unicorn.jpg')
+      );
     }
+    else if(/\.png$/.test(evento.request.url)) {
+      evento.respondWith(
+        fetch('utp.png')
+      );
+    }
+  }
 );
