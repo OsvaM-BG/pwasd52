@@ -6,7 +6,7 @@ self.addEventListener('fetch',
     console.log(evento.request.url);
     if(/\.jpg$/.test(evento.request.url)) {
       evento.respondWith(
-        fetch('unicorn.jpg')
+        fetch('perro.jpg')
       );
     }
     else if(/\.png$/.test(evento.request.url)) {
@@ -16,3 +16,4 @@ self.addEventListener('fetch',
     }
   }
 );
+
