@@ -18,7 +18,7 @@
     <script async src="lib2.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sv.js')
+        navigator.serviceWorker.register('sw.js')
           .then(function(registro) {
             console.log('Registro del SW satisfactorio con ámbito:', registro.scope);
           })
@@ -29,3 +29,4 @@
     </script>
   </body>
 </html>
+
